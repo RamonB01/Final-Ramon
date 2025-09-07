@@ -6,6 +6,9 @@ function App() {
         <hr></hr>
         <h3>Formulario</h3>
         <Formulario></Formulario>
+        <hr />
+        <h3>IMC</h3>
+        <IMC></IMC>
     </div>
   );
 }
