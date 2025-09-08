@@ -9,6 +9,9 @@ function App() {
         <hr />
         <h3>IMC</h3>
         <IMC></IMC>
+        <hr />
+        <h3>Filtro de Frutas</h3>
+        <FiltroFrutas></FiltroFrutas>
     </div>
   );
 }

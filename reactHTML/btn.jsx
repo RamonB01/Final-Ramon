@@ -6,10 +6,8 @@ function BtnOnOf(){
     function togleBtn(){
         setBtnDerecha(!btnDerecha)
         setBtnIzquierda(!btnIzquierda)
-
     }
-
-
+    
     return(
         <>
             <button disabled={btnIzquierda} onClick={togleBtn}>Izquierda</button>
