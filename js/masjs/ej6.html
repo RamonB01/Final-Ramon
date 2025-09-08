@@ -5,26 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 6</title>
 </head>
-<body>
-    <div>
-    </div>
-    <select name="" id="direccion">
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-    </select>
-    <select name="" id="justificado">
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-    </select>
-    <select name="" id="alineado">
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-    </select>
-   <script>
+<style>
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 400px;
+        height: 500px;
+        border: 1px solid black;
+    }
 
-   </script> 
+    .item1 {
+        flex: 1;
+        background-color: red;
+        color: white;
+        text-align: center;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .item2 {
+        flex: 1;
+        background-color: green;
+        color: white;
+        text-align: center;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .item3 {
+        flex: 1 ;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        margin: 5px;
+        padding: 10px;
+    }
+</style>
+<body>
+
+    <div class="contenedor" id="contenedor">
+        <div class="item1" id="item1">1</div>
+        <div class="item2" id="item2">2</div>
+        <div class="item3" id="item3">3</div>
+    </div>
+    <label for="">Justificado</label>
+    <select name="" id="justificado">
+        <option value="" selected disabled>selecccione justificado</option>
+        <option value="flex-start">Inicio</option>
+        <option value="center">Centro</option>
+        <option value="flex-end">Final</option>
+        <option value="space-between">Espacio entre</option>
+        <option value="space-around">Espacio alrededor</option>
+    </select><br>
+    <label for="">Dirección</label>
+    <select name="" id="direccion">
+        <option value="" selected disabled>seleccione dirección</option>
+        <option value="row">Fila</option>
+        <option value="column">Columna</option>
+        <option value="row-reverse">Fila Inversa</option>
+        <option value="column-reverse">Columna Inversa</option>
+    </select><br>
+    <label for="">Alineado</label>
+    <select name="" id="alineado">
+        <option value="" selected disabled>seleccione alineado</option>
+        <option value="stretch">Estirar</option>
+        <option value="center">Centro</option>
+        <option value="flex-start">Inicio</option>
+        <option value="flex-end">Final</option>
+    </select>
+    <script>
+
+        const justificado = $("justificado")
+        const direccion = $("direccion")
+        const alineado = $("alineado")
+//        const contenedor = $("constenedor")
+        const contenedor = document.querySelector(".contenedor")
+
+        justificado.onchange =()=>{
+            contenedor.style.justifyContent = justificado.value
+        }
+
+        direccion.onchange =()=>{
+            contenedor.style.flexDirection= direccion.value
+        }
+
+        alineado.onchange =()=>{
+            contenedor.style.alignItems= alineado.value
+        }
+
+        function $(elemento){
+            return document.getElementById(elemento)
+        }
+    </script>
 </body>
 </html>
