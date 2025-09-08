@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <button id="decremento" onclick="cambiar(-1)" disabled>-</button>
+    <label for="" id="contador">0</label>
+    <button id="incremento" onclick="cambiar(+1)">+</button>
+    <button onclick="reiniciar()">Reiniciar</button>
+    <h3>Historial</h3>
+    <ul id="historial"></ul>
+
+   <script>
+        const incre = document.getElementById("incremento")
+        const decre = document.getElementById("decremento")
+        const contador = document.getElementById("contador")
+        const ul = document.getElementById("historial")
+        
+        function reiniciar() {
+            contador.innerText = 0
+            botonesOfOn(0)
+            crearLi("Reinicio: ", 0)
+        }
+        
+        function crearLi(operacion, valor){
+            const li = document.createElement("li")
+            li.textContent = fechaYHora() + " " + operacion + valor 
+            ul.appendChild(li)
+        }
+        
+        function fechaYHora(){
+            return "Fecha: " + new Date().toLocaleDateString() + " Hora: " + new Date().toLocaleTimeString()
+        }
+        
+        function botonesOfOn(valor){
+            decre.disabled = valor <= 0
+            incre.disabled = valor >= 10
+        }
+
+        function cambiar(el){
+            let valorActual = parseInt(contador.innerText)
+            let nuevoValor = valorActual + el
+            if (nuevoValor < 0 || nuevoValor > 10) return
+
+            contador.innerText = nuevoValor
+            crearLi(el > 0 ? "Incremento: " : "Decremento: ", nuevoValor)
+            botonesOfOn(nuevoValor)
+        }        
+
+
+        // function cambiar(el){
+        //     let valor = parseInt(contador.innerText)
+        //     return (valor + el)
+        //     botonesOfOn(valor)
+        // }
+        
+        // function decrementar() {
+        //     let valor = parseInt(contador.innerText)
+        //     valor--
+        //     contador.innerText = valor
+        //     crearLi("Drecrementar:", valor)
+        //     botonesOfOn()
+        // }
+        
+        // function incrementar() {
+        //     let valor = parseInt(contador.innerText)
+        //     valor++
+        //     contador.innerText = valor
+        //     crearLi("Incrementar:", valor)
+        //     botonesOfOn()
+        // }
+        </script> 
+</body>
+</html>

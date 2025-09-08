@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio </title>
+</head>
+<body>
+    <h3>Cosas por Hacer (clic para eliminar):</h3>
+    <ul id="tareas">
+        <li>Comprar pan</li>
+        <li>Pasear al perro</li>
+        <li>Lavar los platos</li>
+        <li>Estudiar DOM</li>
+    </ul>
+    <script>
+        const tareas = document.querySelectorAll("#tareas li");
+
+        tareas.forEach(tarea => {
+            tarea.addEventListener("click", function() {
+            this.remove(); 
+            });
+        });
+    </script>
+</body>
+</html>

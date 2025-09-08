@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <p>Base</p>
+    <input type="number" id="base">
+    <p>Altura</p>
+    <input type="number" id="altura"> <br><br>
+    <button id="peri">Perimetro</button>
+    <button id="super">Superficie</button>
+   <script>
+        const botonPerimetro= document.getElementById("peri")
+        const botonSuperficie= document.getElementById("super")
+        
+        botonPerimetro.onclick = function(){
+            const altura = Number(document.getElementById("altura").value)
+            const base = Number(document.getElementById("base").value)
+            alert("Perimetro: "+ (base*2 + altura*2))
+        }
+        botonSuperficie.onclick = function(){
+            const altura = Number(document.getElementById("altura").value)
+            const base = Number(document.getElementById("base").value)
+            alert("Superficie: "+ (base*altura))
+        }
+
+   </script> 
+</body>
+</html>
+<!-- 4- Escriba un programa que a partir de dos entradas numéricas
+(base, altura) calcule y muestre como una alerta el perímetro o
+superficie de un rectángulo. Emplear un botón para el perímetro y
+otro para la superficie. -->

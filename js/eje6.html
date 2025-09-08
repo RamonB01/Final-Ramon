@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+   <script>
+        function calculadora(n1,n2,operacion){
+            
+            switch (operacion){
+                case "suma": 
+                    return n1+n2;
+                case "resta":
+                    return n1-n2;
+                case "multiplicasion": 
+                    return n1*n2;
+                case "division": 
+                    if (n2 === 0){
+                        return "Error, no se puede dividir por 0"
+                    } else {return n1/n2 }
+            }
+
+        }
+        console.log(6,2,)
+        console.log(calculadora(6,2,"suma"))
+        console.log(calculadora(6,2,"resta"))
+        console.log(calculadora(6,2,"multiplicasion"))
+        console.log(calculadora(6,0,"division"))
+   </script> 
+</body>
+</html>

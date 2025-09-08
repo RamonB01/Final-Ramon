@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <h3>Lista de Nombres</h3>
+    <form id="formulario" >
+        <div>
+            <label for="nombre">Nombre</label>
+            <input name="nombre" id="nombre" type="text"> <br> <br>
+            <button type="submit" >Agregar Nombre</button>
+        </div>
+    </form>
+    
+    <div id="contenedor"></div>
+   <script>
+        const arreglo = []
+        // const arreglo = ["Shuker", "Kaidos", "Gabrito", "Lucifer", "Mochilita", "Pisani"]
+        
+        const nombre = document.getElementById("nombre")
+        const ul = document.createElement("ul")
+        
+        
+        const formuilario = document.getElementById("formulario")
+        formuilario.addEventListener("submit", (e)=>{
+            e.preventDefault()
+
+            const li = document.createElement("li")
+            const boton = document.createElement("button")
+            boton.textContent = "Eliminar"
+            boton.addEventListener("click",() =>{
+                li.remove()
+            })
+
+            li.textContent = nombre.value + " "
+
+            
+            document.getElementById("contenedor").appendChild(ul)
+            
+            li.appendChild(boton)
+            ul.appendChild(li)
+            
+            arreglo.push(nombre.value)
+            console.log(arreglo)
+            nombre.value = ""
+        })
+        
+
+
+
+        // // const nombre = document.getElementById("nombre")
+        // // const ul = document.createElement("ul")
+
+        // // const agregarNombres = function(e){
+        // //     e.preventDefault()
+        // //     const li = document.createElement("li")
+        // //     li.textContent = nombre.value 
+        // //     ul.appendChild(li)   
+        // //     document.getElementById("contenedor")
+        // // }
+
+        // agregarNombres()
+        // const agregarNombres = function(){
+        //     const ul = document.createElement("ul") // creo elemento ul
+        //     arreglo.forEach(element => {
+        //         const li = document.createElement("li") // creo elemento li
+        //         li.textContent = element // li creado tiene el valor de element
+        //         ul.appendChild(li) // agrega li a ul
+        //     });
+        //     document.getElementById("contenedor").appendChild(ul) // agrega ul a contenedor
+        // }
+   </script> 
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 1</title>
+</head>
+<body>
+    <div>
+        <h1>Ejercicio 1</h1>
+        <p>Ingrese un numero Entero para iniciar</p>
+        <input type="number" id="inicio" step="1">
+        <br>
+        <p>Ingrese un numero Entero para finalizar</p>
+        <input type="number" id="fin" step="1"> 
+        <p>Resultado: <span id="reultado"></span> </p>
+    </div>
+</body>
+    <script>
+
+    function sumarRango(inicio, fin){
+        let suma = 0
+        let i = inicio
+        while (i <= fin) {
+            suma += i
+            i++
+        } 
+        return suma
+    }
+    
+    console.log("Ej1: "+ sumarRango(1,5))
+
+    function contarPares(lista){
+        let contador = 0
+        // let lista = []
+        let i = 0
+        while (i <= lista.length) {
+            if (lista[i] %2 === 0){
+                contador ++
+            }
+            i++
+        }
+        return contador
+    }
+
+    console.log(contarPares([2,3,4,2,5,3,6,3,5,4,6,]))
+
+
+    function revertirCadena(cadena){
+        let reverso = ""
+        let i = cadena.length - 1
+        while (i >= 0){
+            reverso += cadena[i]
+            i--
+        }
+        return reverso
+    }
+
+    console.log(revertirCadena("Hipo"))
+
+    function encontrarMaximo(numeros){
+        let max = numeros[0]
+        let i = 0
+        while (i <= numeros.length){
+            if (max < numeros[i]){
+                max = numeros[i]
+            } i++
+        }return max
+    }
+
+    console.log(encontrarMaximo([2,33,54,2,3,545,3,53,2,23,78]))
+
+
+
+
+
+    </script>
+</html>

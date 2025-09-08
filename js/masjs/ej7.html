@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <h1>Lista</h1>
+    <div id="contenedor"></div>
+   <script>
+        const arreglo = ["Shuker", "Kaidos", "Gabrito", "Lucifer", "Mochilita", "Pisani"]
+
+        const agregarNombres = function(){
+            const ul = document.createElement("ul") // creo elemento ul
+            arreglo.forEach(element => {
+                const li = document.createElement("li") // creo elemento li
+                li.textContent = element // li creado tiene el valor de element
+                ul.appendChild(li) // agrega li a ul
+            });
+            document.getElementById("contenedor").appendChild(ul) // agrega ul a contenedor
+        }
+        agregarNombres()
+   </script> 
+</body>
+</html>

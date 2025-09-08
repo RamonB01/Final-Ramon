@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+        <p id="parrafo">Texto de ejemplo</p>
+
+    <label>Color de texto:</label>
+    <select id="colorTexto">
+        <option value="black">Negro</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+    </select>
+    <br>
+    <label>Color de fondo:</label>
+    <select id="colorFondo">
+        <option value="white">Blanco</option>
+        <option value="yellow">Amarillo</option>
+        <option value="lightblue">Celeste</option>
+        <option value="lightgray">Gris Claro</option>
+    </select>
+   <script>
+        const parrafo = document.getElementById("parrafo")
+        const colorTexto = document.getElementById("colorTexto")
+        const colorFondo = document.getElementById("colorFondo")
+
+        colorTexto.onchange = function(){
+            parrafo.style.color = colorTexto.value
+        }
+
+        colorFondo.onchange = function(){
+            parrafo.style.backgroundColor = colorFondo.value
+        }
+   </script> 
+</body>
+</html>

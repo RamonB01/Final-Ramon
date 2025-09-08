@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <div id="producto">
+        <a id="linkProducto" href="url">Link</a>
+        <h2 id="nombreProducto">Producto</h2>
+        <p id="descripcionProducto">Esta es una descripción.</p>
+        <p>Precio: <span id="precioProducto">$9999.99</span></p>
+    </div>
+   <script>
+        let Link = document.getElementById("linkProducto")
+        Link.setAttribute("href", "https://www.mercadolibre.com.ar/mouse-gamer-inalambrico-logitech-g-serie-lightspeed-g305-black/p/MLA11259955?pdp_filters=item_id:MLA868898132") 
+   
+        let Producto = document.getElementById("nombreProducto")
+        Producto.innerText = "Laptop Súper Rápida"
+
+        let Descripcion = document.getElementById("descripcionProducto")
+        Descripcion.innerText = "Una laptop con lo último en tecnología y un diseño elegante."
+
+        let Precio = document.getElementById("precioProducto")
+        Precio.innerText = "$429999.99"
+   </script> 
+</body>
+</html>

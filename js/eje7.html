@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+   <script>
+        let estudiante = {
+            nombre : "Ramon Barrera",
+            edad : 24,
+            cursos : ["programacion", "legislacion", "Matematica"]
+        }
+        function mostrarInfoEstudiante(objeto){
+            return "Nombre: "+ objeto.nombre + "\n" +
+            "Edad: "+ objeto.edad + "\n" +
+            "Cursos: " + objeto.cursos.join(", ")
+        }
+
+        console.log(mostrarInfoEstudiante(estudiante))
+   </script> 
+</body>
+</html>

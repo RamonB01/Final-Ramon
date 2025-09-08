@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <button id="decrementar" disabled onclick="decrementar()">-</button>
+    <label id="numero">0</label>
+    <button id="incrementar" onclick="incrementar()">+</button>
+    <button id="reiniciar" onclick="reiniciar()">Reiniciar</button>
+    <h3>Historial</h3>
+    <p id="historial"></p>
+    
+   <script>
+        const decre = document.getElementById("decrementar")
+        const incre = document.getElementById("incrementar")
+        // const reiniciar = document.getElementById("reiniciar")
+        let numero = document.getElementById("numero")
+        const historial = document.getElementById("historial")
+        const ul = document.createElement("ul")
+        
+        historial.appendChild(ul)
+
+        function decrementar(){
+            let valor = parseInt(numero.innerText)
+            if (valor > 0){
+                valor--
+                numero.innerText = valor
+                const li = document.createElement("li")
+                li.textContent = darFechaYHora() + "Decremento: "+ valor
+                ul.appendChild(li)
+            }
+            decre.disabled = valor <= 0
+            incre.disabled = valor >= 10
+        }
+
+        function incrementar(){
+            let valor = parseInt(numero.innerText)
+            if (valor < 10){
+                valor++
+                numero.innerText = valor
+                const li = document.createElement("li")
+                li.textContent = darFechaYHora() + "Incremento: "+ valor
+                ul.appendChild(li)
+            }
+            decre.disabled = valor <= 0
+            incre.disabled = valor >= 10
+        }
+
+        function reiniciar(){
+            numero.innerText = 0
+                const li = document.createElement("li")
+                li.textContent = darFechaYHora() + "Reinicio: 0"
+                ul.appendChild(li)
+            decre.disabled = true
+            incre.disabled = false
+        }
+
+        function darFechaYHora(){
+            return "Fecha: "+ new Date().toLocaleDateString() + " Hora: " + new Date().toLocaleTimeString() + " | "
+        }
+
+   </script> 
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <div id="perfilUsuario"> </div>
+   <script>
+        const titulo = document.createElement("h2")
+        titulo.innerText = "Ramon"
+        titulo.style.fontWeight = "bold"
+
+        const parrafo = document.createElement("p")
+        parrafo.innerText = "reb@gmail.com"
+        parrafo.style.fontStyle = "italic"
+
+        const parrafo2 = document.createElement("p")
+        parrafo2.innerText = "24"
+        
+        const perfil = document.getElementById("perfilUsuario")
+        perfil.appendChild(titulo)
+        perfil.appendChild(parrafo)
+        perfil.appendChild(parrafo2)
+
+   </script> 
+</body>
+</html>

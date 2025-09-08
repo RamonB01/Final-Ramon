@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+   <script>
+        function esPalindromo(texto){
+            let palabraLimpia = texto.trim().toLowerCase().replaceAll(" ", "");
+            let palabraInversa = palabraLimpia.split("").reverse().join("")
+            return palabraLimpia === palabraInversa
+        }
+
+        console.log(esPalindromo("Neuquen"))
+        console.log(esPalindromo("Pancho"))
+        console.log(esPalindromo("neoeN"))
+        console.log(esPalindromo("Menem"))
+   </script> 
+</body>
+</html>

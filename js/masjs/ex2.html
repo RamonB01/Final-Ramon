@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Animales</title>
+</head>
+<body>
+    <form id="formulario" action="">
+        <label for="">Animal</label>
+        <input type="text" name="animal" id="animal" required><br>
+        <label for="">Altura</label>
+        <input type="number" name="altura" id="altura" required step="0.1" min="0"><br>
+        <button id="agregar" type="submit">Agregar</button>
+    </form>
+    <ul id="lista"></ul>
+    <span id="masymenos"></span>
+   <script>
+       const formuilario = document.getElementById("formulario")
+       const ul = document.getElementById("lista")
+       const listaAnimales = []
+       const masymenos = document.getElementById("masymenos")
+    //    const animalInp = document.getElementById("animal").value 
+    //    const alturaInp = parseFloat(document.getElementById("altura").value) 
+       
+       formuilario.addEventListener("submit", (e)=>{
+            e.preventDefault()
+           
+            const animal = document.getElementById("animal") 
+            const altura = document.getElementById("altura") 
+
+            const nomAnimal = animal.value 
+            const alt = parseFloat(altura.value)
+            
+            if (listaAnimales.some(a => a.nombre.toLowerCase() === nomAnimal.toLowerCase())){
+                alert("Este animal ya fue Ingresado")
+                animal.value = ""
+                altura.value = ""
+                return
+            }
+
+            listaAnimales.push({"nombre" : nomAnimal , "altura": alt})
+            
+            const li = document.createElement("li")
+            li.textContent = nomAnimal + " (" + alt +" m)"
+            ul.appendChild(li)
+
+            masymenos.innerHTML = menorMayor()
+
+            animal.value = ""
+            altura.value = ""
+        
+           console.log(listaAnimales)
+        })
+
+        function menorMayor (){
+          const menor = listaAnimales.reduce((acc , animal) =>{
+            return animal.altura < acc.altura ? animal : acc
+          })
+          const mayor = listaAnimales.reduce((acc, animal) => {
+            return animal.altura > acc.altura ? animal : acc
+          })
+        
+          return "Más Alto: " + mayor.nombre + "<br> Más Bajo: " + menor.nombre
+        }
+
+
+   </script> 
+</body>
+</html>

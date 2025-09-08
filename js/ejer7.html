@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <p id="texto">Texto de Prueba</p>
+    <input id="input"> <br>
+    <button id="boton">Cambiar</button>
+   <script>
+        const Boton = document.getElementById("boton")
+        const Texto = document.getElementById("texto")
+        const Input = document.getElementById("input")
+        
+        Boton.onclick = function(){
+            Texto.innerText = Input.value
+        }
+        
+        
+   </script> 
+</body>
+</html>

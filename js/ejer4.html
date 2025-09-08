@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <h3>Lista de Tareas:</h3>
+    <ul>
+        <li>Estudiar JavaScript</li>
+        <li>Hacer la compra</li>
+        <li>Llamar al técnico</li>
+        <li>Leer un capítulo del libro</li>
+    </ul>
+   <script>
+    const elemento_li = document.querySelectorAll("ul li")
+        for (const elemento of elemento_li){
+            elemento.innerText = "[HECHO] "+ elemento.innerText
+            elemento.style.textDecoration = "line-through"
+        }
+
+        console.log("WACHOOOOOOOOO")
+   </script> 
+</body>
+</html>

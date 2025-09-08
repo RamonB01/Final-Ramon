@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio </title>
+</head>
+<body>
+    <!-- <button id="decrementar" onclick="cambiar(-1)" disabled>-</button>
+    <label id="numero">0</label>
+    <button id="incrementar" onclick="cambiar(+1)">+</button><br> -->
+    <button id="decrementar" onclick="decrementar()" disabled>-</button>
+    <label id="numero">0</label>
+    <button id="incrementar" onclick="incrementar()">+</button> <br>
+    <button onclick="reiniciar()">Reiniciar</button>
+    <h3>Historial</h3>
+    <p id="historial"></p>
+   <script>
+    let contador = document.getElementById("contador")
+    let numero = document.getElementById("numero")
+    let decre = document.getElementById("decrementar")
+    let incre = document.getElementById("incrementar")
+
+    const ul = document.createElement("ul")
+    document.getElementById("historial").appendChild(ul)
+    const historial = document.getElementById("historial")
+    const lista = []
+
+    
+    function decrementar() {
+        let valor = parseInt(numero.innerText)
+        if (valor > 0){
+            valor--
+            numero.innerText = valor
+            console.log(valor)
+            const li = document.createElement("li")
+            li.textContent = fechaYHora() + " - Decremento: " + valor
+            ul.appendChild(li)
+        }
+        decre.disabled = valor <= 0
+        incre.disabled = valor >= 10
+    }
+
+    
+    function incrementar() {
+        let valor = parseInt(numero.innerText)
+        if (valor < 10){
+            valor++
+            numero.innerText = valor
+            console.log(valor)
+            const li = document.createElement("li")
+            li.textContent = fechaYHora() + " - Incremento: " + valor
+            ul.appendChild(li)
+        }
+        incre.disabled = valor >= 10
+        decre.disabled = valor <= 0  
+    }
+    
+    
+    function reiniciar(){
+        numero.innerText = 0
+        const li = document.createElement("li")
+        li.textContent = fechaYHora() + " - Reinicio: 0"
+        ul.appendChild(li)
+        decre.disabled = true
+        incre.disabled = false
+    }
+    
+    function fechaYHora(){
+        return "Fecha: "+ new Date().toLocaleDateString() + " Hora: " + new Date().toLocaleTimeString()
+    }
+        
+    
+    
+    // function cambiar(cantidad){
+    //     let valor = parseInt(numero.innerText) + cantidad
+    //     if (valor <= 10 && valor >= 0){
+    //         numero.innerText = valor
+    //         console.log(valor)
+    //     }
+    //     incre.disabled = valor >=10
+    //     decre.disabled = valor <=0
+    // }
+
+
+
+    
+    
+
+
+   </script> 
+</body>
+</html>
