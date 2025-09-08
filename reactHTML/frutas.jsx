@@ -34,11 +34,28 @@ function FiltroFrutas(){
         setMensaje(longitud)
     }
 
+        function eliminarFruta(index){
+        const nuevaLista = ulLista.filter((_, i) => i !== index)
+        setUlLista(nuevaLista)
+    }
+
+    function eliminarFruta(index){
+    // Hacemos una copia del array porque splice modifica el original
+    const copiaLista = [...ulLista];
+
+    // splice elimina 1 elemento en la posición "index"
+    copiaLista.splice(index, 1);
+
+    // Actualizamos el estado con la lista ya modificada
+    setUlLista(copiaLista);
+}
+
+
     return(<div>
     <p>Lista de Frutas</p>
     <ul>
         {ulLista.map((elemento, index) => (
-        <li key={index}>{elemento}</li>
+        <li key={index}>{elemento} <button onClick={()=>eliminarFruta(index)}>X</button></li>
         ))}
     </ul>
     <p>{mensaje}</p>
