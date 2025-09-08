@@ -12,6 +12,9 @@ function App() {
         <hr />
         <h3>Filtro de Frutas</h3>
         <FiltroFrutas></FiltroFrutas>
+        <hr />
+        <h3>Filtros Tareas</h3>
+        <Tareas></Tareas>
     </div>
   );
 }
