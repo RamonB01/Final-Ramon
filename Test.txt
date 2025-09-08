@@ -1,0 +1,273 @@
+Pregunta 1
+¿Cómo declarar un estado booleano llamado isOpen con valor inicial false en React?
+
+javascript
+const [isOpen, setIsOpen] = useState(false);
+Pregunta 2
+Ordena el flujo típico de una petición a una API WEB: ✅ 1 → 2 → 3 → 4 → 5 → 6 → 7
+
+Pregunta 5
+¿Qué se visualiza en la consola al ejecutar el siguiente código?
+
+javascript
+const numeros = [3, 2, 5, 15, 16, 8, 7, 1];
+const resultado = numeros.reduce((acc, num) => acc < num ? acc : num);
+console.log(resultado);
+✅ Respuesta: 1
+
+Pregunta 6
+¿Cuál es el resultado de ['a', 'b', 'c'].reduce((acc, val) => acc + val, '')?
+
+a. "abc" ✅
+
+b. undefined
+
+c. ['a', 'b', 'c']
+
+d. Un error
+
+Pregunta 7
+¿Cómo se accede al cuerpo de la respuesta en formato JSON en una llamada Fetch?
+
+a. La respuesta ya está en formato JSON
+
+b. Llamando al método .json() ✅
+
+c. Accediendo a .body directamente
+
+d. Usando JSON.parse(response)
+
+Pregunta 8
+¿Qué es JSX?
+
+a. Una biblioteca de plantillas
+
+b. Una versión de JS para React
+
+c. Una extensión de sintaxis para escribir HTML en JS ✅
+
+d. Un motor de renderizado del DOM
+
+Pregunta 9
+¿Qué atributo se usa en <input> para relacionarlo con for en <label>?
+
+a. value
+
+b. id ✅
+
+c. class
+
+d. name
+
+Pregunta 10
+¿Cuál es el propósito de preventDefault() en formularios?
+
+a. Ocultar el formulario
+
+b. Evitar que se envíe ✅
+
+c. Resetear el formulario
+
+d. Validar los campos
+
+Pregunta 11
+En React, ¿los componentes deben comenzar con mayúscula?
+
+Verdadero ✅
+
+Falso
+
+Pregunta 12
+¿Para qué sirve el atributo key en listas de React?
+
+a. Identificar cambios en elementos ✅
+
+b. Estilizar elementos
+
+c. Hacerlos buscables
+
+d. Darles un ID único en el DOM
+
+Pregunta 13
+¿Qué hace el método find()?
+
+a. Elimina elementos
+
+b. Verifica si alguno pasa la prueba
+
+c. Crea un nuevo arreglo con los que pasan
+
+d. Devuelve el primero que pasa la prueba ✅
+
+Pregunta 14
+¿Para qué sirve useEffect en React?
+
+a. Declarar estado
+
+b. Manejar efectos secundarios ✅
+
+c. Solo para APIs externas
+
+d. Manejar cambios de estado
+
+Pregunta 15
+¿Qué afirmación es correcta sobre el evento submit?
+
+a. Solo se dispara con <input type="submit">
+
+b. Se activa en <form> y puede prevenirse con preventDefault() ✅
+
+c. Se captura en el botón
+
+d. No se puede cancelar
+
+Pregunta 16
+Relacionar métodos HTTP con sus funciones:
+
+DELETE → Eliminar ✅
+
+GET → Obtener ✅
+
+POST → Crear ✅
+
+PUT → Actualizar ✅
+
+Pregunta 17
+¿Qué método se usa para sumar todos los elementos de un array?
+
+a. reduce() ✅
+
+b. forEach()
+
+c. filter()
+
+d. map()
+
+Pregunta 18
+Relacionar métodos de array con su descripción:
+
+reduce() → Acumula en un solo valor ✅
+
+forEach() → Ejecuta sin devolver ✅
+
+map() → Transforma y devuelve nuevo array ✅
+
+filter() → Devuelve elementos que cumplen condición ✅
+
+Pregunta 19
+¿Qué se visualiza al ejecutar este código?
+
+javascript
+const numeros = [2, 5, 6, 1, 6, 8, 7, 1];
+const resultado = numeros.map((num) => num * 2);
+console.log(resultado);
+✅ Respuesta: [4, 10, 12, 2, 12, 16, 14, 2]
+
+Pregunta 20
+¿Qué son las 'props' en React?
+
+a. Métodos para el DOM
+
+b. Estado interno
+
+c. Datos pasados de padre a hijo ✅
+
+d. Eventos personalizados
+
+Pregunta 21
+¿Qué se visualiza al ejecutar este código?
+
+javascript
+const numeros = [2, -4, 3, -2];
+const resultado = numeros.reduce((acc, num) => acc * num, 1);
+console.log(resultado);
+✅ Respuesta: 48
+
+Pregunta 22
+¿Qué representa el body en una petición POST?
+
+a. Tipo de respuesta esperada
+
+b. Credenciales
+
+c. Dirección del servidor
+
+d. Datos enviados al servidor ✅
+
+Pregunta 23
+¿Código HTTP para creación exitosa de recurso?
+
+a. 201 Created ✅
+
+b. 200 OK
+
+c. 204 No Content
+
+d. 404 Not Found
+
+Pregunta 24
+¿forEach() devuelve un nuevo arreglo?
+
+Verdadero
+
+Falso ✅
+
+Pregunta 25
+¿Qué se visualiza al ejecutar este código?
+
+javascript
+const numeros = [-2, -5, -6, 1, -6, 8, -7, 1];
+const resultado = numeros.filter((num) => num > 0);
+console.log(resultado);
+✅ Respuesta: [1, 8, 1]
+
+Pregunta 26
+¿Cuál es el segundo argumento opcional de useEffect?
+
+a. Objeto de configuración
+
+b. Función de limpieza
+
+c. Booleano
+
+d. Arreglo de dependencias ✅
+
+Pregunta 27
+¿El atributo required es suficiente para validación segura?
+
+Verdadero
+
+Falso ✅
+
+Pregunta 28
+¿Qué hace el método map()?
+
+a. Ejecuta sin devolver
+
+b. Filtra elementos
+
+c. Crea nuevo arreglo con resultados de función ✅
+
+d. Modifica el original
+
+Pregunta 29
+¿Función principal del header en una API REST?
+
+a. Metadatos como Content-Type o Authorization ✅
+
+b. Datos principales
+
+c. Acción sobre el recurso
+
+d. URL del recurso
+
+Pregunta 30
+¿Qué método se usa para excluir elementos que no cumplen una condición?
+
+a. find()
+
+b. map()
+
+c. every()
+
+d. filter() ✅
