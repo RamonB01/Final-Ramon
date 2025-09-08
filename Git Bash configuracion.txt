@@ -1,0 +1,65 @@
+Git Bash configuracion
+
+Mirar la configuracioon de GIT
+ git config --list
+
+Configurar usuario (nivel global)
+git config --global user.name "Ramon Barrera"
+git config --global user.email rebcontacto@gmail.com
+
+Hay que crear una carpeta abrir el cmd de sa carpeta 
+
+Crear con comando
+echo texto del html > "nombre del archivo.html"
+
+Crear el repositorio
+git init
+
+Ver el estado actual del repositorio
+(algun cambio no guardado, si ya se guardó, un archivo no se agregó, etc)
+git status
+
+Agregar archivos al repositorio
+git add . (agrega todos los archivos)
+git add "nombre_del_archivo.tipo" (agrega el archivos especificado)
+
+Agregar commit (mensaje) sobre los cambios
+git commit -m "Mensaje sobre cambio y/o commit"
+
+Ver historial de commit´s
+git log
+
+Ver ramas
+git branch
+
+Cambiar de Ramas y/o Volver a commit
+git checkout (codigo de commit)
+git checkout 
+
+Cambiar de rama
+git switch master (en este caso la rama es master)
+
+Crear nueva rama y poner los cambios en ella
+git switch -c "nombre_de_rama"
+
+Usar git con github
+Crear el repositorio en github (ya logeados)
+copiar el https
+git remote add origin https://github.com/nombre-usuario/nombre-repo.git
+git push origin master (subimos la rama master a github)
+
+Subir cambios en github desde git
+git status
+git add .
+git commit -m "Escribir cambios"
+git push 
+git status
+
+Clonar:
+git clone https://github.com/usuario/nombre-repo.git
+Entrar a la carpeta:
+cd nombre-repo
+
+
+Actualizar repo de GitHub
+git pull origin main
