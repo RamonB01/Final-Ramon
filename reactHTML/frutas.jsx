@@ -4,13 +4,13 @@ function FiltroFrutas(){
     const [ulLista, setUlLista] = React.useState(lista)
     const [mensaje, setMensaje] = React.useState("Mensaje Default")
 
-    function MostrarFrutas(array){
-        array.forEach(element => {
-            const li = document.createElement("li")
-            li.innerHTML = element
-            ulLista.appendChild(li)
-        });
-    }
+    // function MostrarFrutas(array){
+    //     array.forEach(element => {
+    //         const li = document.createElement("li")
+    //         li.innerHTML = element
+    //         ulLista.appendChild(li)
+    //     });
+    // }
 
     function mayusUno(){
         const upperCaseFruta = lista.map(fruta => fruta.charAt(0).toUpperCase() + fruta.slice(1))
