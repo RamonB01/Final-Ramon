@@ -63,3 +63,83 @@ cd nombre-repo
 
 Actualizar repo de GitHub
 git pull origin main
+
+
+1️⃣ Concepto básico
+
+git merge se usa para combinar cambios de una rama en otra.
+
+Por ejemplo: tenés una rama main y otra feature (nueva funcionalidad).
+
+Querés que los cambios de feature pasen a main.
+
+2️⃣ Flujo típico de trabajo
+a) Estar en la rama destino
+git checkout main
+
+
+Esto indica que querés combinar cambios en main.
+
+b) Hacer merge de la otra rama
+git merge feature
+
+
+feature es la rama origen que querés unir a la rama actual (main).
+
+Git intentará fusionar los cambios automáticamente.
+
+3️⃣ Posibles resultados
+a) Merge automático exitoso
+
+Git combina los cambios y genera un commit de merge.
+
+Ejemplo de salida:
+
+Updating abc1234..def5678
+Fast-forward
+ file.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+b) Conflictos
+
+Si dos ramas modificaron la misma línea, Git no puede decidir y deja un conflicto.
+
+Se verá así en los archivos:
+
+<<<<<<< HEAD
+código en main
+=======
+código en feature
+>>>>>>> feature
+
+
+Debés elegir qué versión conservar o combinar ambas.
+
+Luego:
+
+git add archivo_conflicto
+git commit
+
+4️⃣ Tips importantes
+
+Siempre hacer git pull antes de merge si trabajás con repositorio remoto.
+
+Usar --no-ff si querés forzar un commit de merge incluso cuando podría hacerse fast-forward:
+
+git merge --no-ff feature
+
+
+Ver ramas disponibles:
+
+git branch
+
+🔹 Ejemplo completo
+git checkout main       # paso 1: voy a la rama destino
+git pull                # paso 2: actualizo main
+git merge feature       # paso 3: combino la rama feature en main
+
+
+Si hay conflictos → resolverlos, luego:
+
+git add .
+git commit

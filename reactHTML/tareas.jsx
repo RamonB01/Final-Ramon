@@ -36,7 +36,11 @@ function Tareas(){
         const busAut = lisTareas.find((el)=> el.title.toLowerCase().includes("aut"))
         setLisTareas([busAut])
     }
-    
+
+    function eliminarTareaPorId(id) {
+        // usamos la versión con callback para basarnos en el estado previo
+        setLisTareas(prev => prev.filter(t => t.id !== id));
+    }
     
     return(
         <>
@@ -48,7 +52,7 @@ function Tareas(){
         <p>{contador}</p>
     {estado ? (<ul>
         {lisTareas.map((elemento) => (
-        <li key={elemento.id}>{elemento.title} - {elemento.completed ? "✅ Hecha" : "⏳ Pendiente"}</li>
+        <li key={elemento.id}>{elemento.title} - {elemento.completed ? "✅ Hecha" : "⏳ Pendiente"} <button onClick={()=> eliminarTareaPorId(elemento.id)}>X</button></li>
         ))}
     </ul>) : (
         <ul>
